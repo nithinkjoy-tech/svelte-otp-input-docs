@@ -10,23 +10,31 @@
 	];
 
 	import logo from '$lib/assets/svelte-otp-input-logo.png';
+	import close from '$lib/assets/close.svg?raw';
 
-	let { activeContent = $bindable(), currentTheme } = $props();
+	let { activeContent = $bindable(), currentTheme, closeMobileMenu } = $props();
 
 </script>
 
 <div class="sidebar">
-	<img src={logo} class="svelte-otp-input-logo" alt="OTP Input Logo" />
-	{#each sideBarItems as { category, items }}
-		<div class="category">
-			<h3>{category}</h3>
-			<ul>
-				{#each items as item}
-					<li><a role="menuitem" tabindex="-1" class:active={activeContent === item} style:color="{currentTheme=='dark'?'#CBCCCE':''}" onclick={() => activeContent = item}>{item}</a></li>
-				{/each}
-			</ul>
-		</div>
-	{/each}
+	<span class="close-btn" onclick={closeMobileMenu}>
+		<span class="close">
+			{@html close}
+		</span>
+	</span>
+	<div>
+		<img src={logo} class="svelte-otp-input-logo" alt="OTP Input Logo" />
+		{#each sideBarItems as { category, items }}
+			<div class="category">
+				<h3>{category}</h3>
+				<ul>
+					{#each items as item}
+						<li><a role="menuitem" tabindex="-1" class:active={activeContent === item} style:color="{currentTheme=='dark'?'#CBCCCE':''}" onclick={() => activeContent = item}>{item}</a></li>
+					{/each}
+				</ul>
+			</div>
+		{/each}
+	</div>
 </div>
 
 <style>
@@ -48,11 +56,13 @@
 		}
 
     .sidebar {
+				position: relative;
         width: 360px;
         height: 100vh;
         overflow-y: auto;
         padding: 34px;
         font-family: Arial, sans-serif;
+				background-color: var(--sk-bg-1);
     }
     .sidebar h2 {
         color: #6c757d;
@@ -84,5 +94,23 @@
     }
     .category {
         margin-top: 15px;
+    }
+
+		.close {
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				width: 24px;
+				height: 24px;
+				cursor: pointer;
+		}
+
+		.close-btn {
+				display: none;
+		}
+
+    .close-btn :global(path) {
+        stroke: var(--sk-fg-2);
+				fill: var(--sk-fg-2);
     }
 </style>
