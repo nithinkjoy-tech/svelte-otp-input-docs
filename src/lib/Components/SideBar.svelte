@@ -4,10 +4,10 @@
 
 	let sideBarItems = [
 		{ category: 'General', items: ['Basic Usage'] },
-		{ category: 'Value & Binding', items: ['bind:value', 'bind:this', 'bind:inputRef', 'setValue'] },
+		{ category: 'Value & Binding', items: ['inputType', 'bind:value', 'bind:this', 'bind:inputRef', 'setValue'] },
 		{
 			category: 'Layout & Structure',
-			items: ['numInputs', 'group', 'groupSeparator', 'separator']
+			items: ['separator', 'group', 'groupSeparator']
 		},
 		{
 			category: 'Appearance & Styles',

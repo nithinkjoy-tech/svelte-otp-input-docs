@@ -16,15 +16,34 @@ npm install svelte-otp-input
 
 ```svelte
     <script>
-      import OtpInput, { setValue } from 'svelte-otp-input';
-      
-      let otp = $state("");
+        import OtpInput, { setValue, inputRef } from 'svelte-otp-input';
+    
+        let otp = $state("");
+    
+        function clearOTP() {
+            setValue("");
+            inputRef[0].focus();
+        }
     </script>
-    
-    <OtpInput
-      bind:value={otp}
-      numInputs={4}
-    />
-    
-    <button onclick={() => setValue("")}>Clear</button>
+
+	<OtpInput
+		bind:value={otp}
+		numInputs={4}
+		inputType="number"
+		placeholder="•"
+		containerStyle={{
+			gap: '6px',
+			padding: '24px'
+		}}
+		inputStyles={{
+			width: '60px',
+			height: '60px',
+			fontSize: '28px'
+		}}
+		inputFocusStyle={{
+			border: '2px solid #3B82F6'
+		}}
+	/>
+	
+	<button onclick={clearOTP}>Clear</button>
 ```
