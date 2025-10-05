@@ -26,7 +26,7 @@ We can group inputs by using `group` prop. And make sure sum of `group` should b
         separator=""
         inputType="number"
         group={[2,2]} // sum of group should be equal to numInputs
-        groupSeparator={groupSeparatorSnippet}
+        groupSeparator={groupSeparatorSnippet} // this can be a snippet or a string
     />
     
     <style>
