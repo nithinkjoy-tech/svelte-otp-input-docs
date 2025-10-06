@@ -25,7 +25,6 @@
 			items: [
 				'shouldAutoFocus',
 				'placeholder',
-				'inputType',
 				'isError',
 				'isDisabled',
 				'restrictPaste'
