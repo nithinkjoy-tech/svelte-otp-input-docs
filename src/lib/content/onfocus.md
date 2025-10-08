@@ -3,7 +3,7 @@ title: onFocus
 ---
 
 ## onFocus
-This function gets called when the user inputs a value in any OTP field and receives the OTP value as a parameter. The `onFocus` prop takes an array where the `0th` index is the callback function and the `1st` index is a string specifying when to call it: `"before"`, `"after"`, or `"replace"`.
+This function gets called when we focus on an input field and receive event and index as a parameter. The `onFocus` prop takes an array where the `0th` index is the callback function and the `1st` index is a string specifying when to call it: `"before"`, `"after"`, or `"replace"`.
 
 Ex: `onFocus={[onFocus, "after"]}`
 
@@ -62,7 +62,7 @@ Our custom `onFocus` function will replace the default `onFocus` function.
 ```
 
 ### Example: Before
-Our custom `onFocus` function will execute before the default `onFocus` function gets executed.
+Our custom `onFocus` function will execute before the default `onFocus` method gets executed.
 
 ```svelte
     <script>
@@ -85,7 +85,7 @@ Our custom `onFocus` function will execute before the default `onFocus` function
 ```
 
 ### Example: After
-Our custom `onFocus` function will execute after the default `onFocus` function gets executed.
+Our custom `onFocus` function will execute after the default `onFocus` method gets executed.
 
 ```svelte
     <script>
