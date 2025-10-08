@@ -33,17 +33,15 @@
 		{
 			category: 'Events & Callbacks',
 			items: [
-				'onChange',
+				'onComplete',
+				'onEnter',
 				'onInput',
 				'onFocus',
 				'onBlur',
 				'onPaste',
-				'onComplete',
-				'onEnter',
-				'keyDown'
+				'keyDown',
 			]
-		},
-		{ category: 'Extras', items: ["Custom Event Ordering ([handler, 'after'])"] }
+		}
 	];
 
 	import logo from '$lib/assets/svelte-otp-input-logo.png';

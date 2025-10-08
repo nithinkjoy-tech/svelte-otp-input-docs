@@ -54,7 +54,7 @@ You can also use array of different input types for each input field
         import OtpInput from 'svelte-otp-input';
     
         let otp = $state("");
-        +++let regex = /^[A-Za-z]+$/+++
+        +++let regex = /^[A-Za-z]+$/+++ // always pass regex as a variable like this, if we directly pass as a prop it will get interpreted differently
     </script>
     
     <OtpInput
