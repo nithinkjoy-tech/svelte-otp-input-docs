@@ -2,7 +2,7 @@
 title: placeholder
 ---
 
-## placeholder
+# placeholder
 Placeholder can be single character or multiple characters of length equal to the number of inputs.
 
 ### Example

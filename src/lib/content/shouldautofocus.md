@@ -2,7 +2,7 @@
 title: shouldAutoFocus
 ---
 
-## shouldAutoFocus
+# shouldAutoFocus
 When `shouldAutoFocus` is true it focuses 1st input on mount. It accepts Boolean value. The default value is `true`
 
 ### Example

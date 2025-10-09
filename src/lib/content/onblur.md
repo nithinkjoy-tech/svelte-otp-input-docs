@@ -2,7 +2,7 @@
 title: onBlur
 ---
 
-## onBlur
+# onBlur
 This function gets called when we blur on an input field and receive event and index as a parameter. The `onBlur` prop takes an array where the `0th` index is the callback function and the `1st` index is a string specifying when to call it: `"before"`, `"after"`, or `"replace"`.
 
 Ex: `onBlur={[onBlur, "after"]}`

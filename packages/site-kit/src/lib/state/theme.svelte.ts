@@ -2,7 +2,7 @@ import { MediaQuery } from 'svelte/reactivity';
 import { Persisted } from './Persisted.svelte';
 
 class Theme {
-	#preference = new Persisted<'system' | 'light' | 'dark'>('sv:theme', 'system');
+	#preference = new Persisted<'system' | 'light' | 'dark'>('sv:theme', 'light');
 	#query = new MediaQuery('prefers-color-scheme: dark');
 	#system = $derived<'dark' | 'light'>(this.#query.current ? 'dark' : 'light');
 

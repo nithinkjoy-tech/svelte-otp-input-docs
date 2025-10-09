@@ -2,7 +2,7 @@
 title: onComplete
 ---
 
-## onComplete
+# onComplete
 This function gets called when all fields are filled.
 
 ### Example

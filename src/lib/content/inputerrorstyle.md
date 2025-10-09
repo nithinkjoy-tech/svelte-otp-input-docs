@@ -2,7 +2,7 @@
 title: inputErrorStyle
 ---
 
-## inputErrorStyle
+# inputErrorStyle
 Style of each input box
 
 | Type                              | Description       |

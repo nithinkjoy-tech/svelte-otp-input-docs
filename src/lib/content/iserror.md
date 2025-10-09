@@ -2,7 +2,7 @@
 title: isError
 ---
 
-## isError
+# isError
 Applies error styling to the input. Accepts a boolean value. Defaults to `false`.
 
 ### Example

@@ -1,6 +1,8 @@
 <script>
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import logo from '$lib/assets/svelte-otp-input-logo.png';
+	import close from '$lib/assets/close.svg?raw';
 
 	let sideBarItems = [
 		{ category: 'General', items: ['Basic Usage'] },
@@ -43,9 +45,6 @@
 			]
 		}
 	];
-
-	import logo from '$lib/assets/svelte-otp-input-logo.png';
-	import close from '$lib/assets/close.svg?raw';
 
 	let {currentTheme, closeMobileMenu } = $props();
 	let activeContent = $derived($page.url.pathname.split('/').pop());
@@ -121,7 +120,7 @@
 	.sidebar {
 		position: relative;
 		width: 360px;
-		height: 100vh;
+		height: 100svh;
 		overflow-y: auto;
 		padding: 34px;
 		font-family: Arial, sans-serif;

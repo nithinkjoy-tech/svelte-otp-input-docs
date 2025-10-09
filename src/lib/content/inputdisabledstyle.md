@@ -2,7 +2,7 @@
 title: inputDisabledStyle
 ---
 
-## inputDisabledStyle
+# inputDisabledStyle
 Style of each input box when disabled.
 
 | Type                              | Description       |

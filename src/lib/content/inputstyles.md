@@ -2,7 +2,7 @@
 title: inputStyles
 ---
 
-## inputStyles
+# inputStyles
 Style of each input box
 
 | Type                              | Description       |

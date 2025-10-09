@@ -2,7 +2,7 @@
 title: bind:inputRef
 ---
 
-## bind:inputRef
+# bind:inputRef
 
 ### Create your own reference
 

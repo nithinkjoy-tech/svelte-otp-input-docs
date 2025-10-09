@@ -2,7 +2,7 @@
 title: isDisabled
 ---
 
-## isDisabled
+# isDisabled
 Disables user interaction with the input when set to `true`. Accepts a boolean value. Defaults to `false`.
 
 ### Example

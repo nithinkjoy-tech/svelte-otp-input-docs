@@ -2,7 +2,7 @@
 title: containerStyles
 ---
 
-## containerStyles
+# containerStyles
 Style of the container, like spacing between inputs etc.
 
 | Type           | Description      |

@@ -2,14 +2,11 @@
 title: bind:this
 ---
 
-## bind:this
+# bind:this
 
 ### Explicitly Setting Value
 
 To get a reference to a OtpInput, use `bind:this={otpRef}`. The value will be undefined until the component is mounted.
-
-### otpRef.inputValues
-Get array of input values
 
 ### otpRef.inputRefs
 Get input refs
@@ -109,3 +106,6 @@ Get current focused index
     
     <button onclick={() => getCurrentFocusedIndex()}>Get Current Focus</button>
 ```
+
+### otpRef.inputValues
+Get array of input values

@@ -2,8 +2,8 @@
 title: onInput
 ---
 
-## onInput
-This function gets called when the user inputs a value in any OTP field and receives the OTP value as a parameter. The `onInput` prop takes an array where the `0th` index is the callback function and the `1st` index is a string specifying when to call it: `"before"`, `"after"`, or `"replace"`.
+# onInput
+This function gets called when the user inputs a value in any OTP field and will receive the OTP value as a parameter of the function. The `onInput` prop takes an array where the `0th` index is the callback function and the `1st` index is a string specifying when to call it: `"before"`, `"after"`, or `"replace"`.
 
 Ex: `onInput={[onInput, "after"]}`
 

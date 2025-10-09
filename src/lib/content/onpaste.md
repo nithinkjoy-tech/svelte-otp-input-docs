@@ -2,7 +2,7 @@
 title: onPaste
 ---
 
-## onPaste
+# onPaste
 This function gets called when we paste on an input field and receive event and index as a parameter. The `onPaste` prop takes an array where the `0th` index is the callback function and the `1st` index is a string specifying when to call it: `"before"`, `"after"`, or `"replace"`.
 
 Ex: `onPaste={[onPaste, "after"]}`

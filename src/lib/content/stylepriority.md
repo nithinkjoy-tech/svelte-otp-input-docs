@@ -2,7 +2,7 @@
 title: stylePriority
 ---
 
-## stylePriority (Experimental)
+# stylePriority (Experimental)
 Defines the CSS specificity priority for input states. When multiple states are active (e.g., disabled + error + focus), styles are applied in this priority order:
 Default:
 1. Disabled (p0) - highest priority

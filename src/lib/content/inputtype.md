@@ -2,7 +2,7 @@
 title: inputType
 ---
 
-## inputType
+# inputType
 
 | Value      | Description | Allowed Characters |
 |------------|-------------|-------------------|

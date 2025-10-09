@@ -2,7 +2,7 @@
 title: keyDown
 ---
 
-## keyDown
+# keyDown
 This function gets called when we press on a key and receive event and index as a parameter. The `keyDown` prop takes an array where the `0th` index is the callback function and the `1st` index is a string specifying when to call it: `"before"`, `"after"`, or `"replace"`.
 
 Ex: `keyDown={[keyDown, "after"]}`

@@ -2,7 +2,7 @@
 title: group
 ---
 
-## group
+# group
 
 We can group inputs by using `group` prop. And make sure sum of `group` should be equal to `numInputs`.
 
@@ -16,17 +16,17 @@ We can group inputs by using `group` prop. And make sure sum of `group` should b
         let otp = $state("");
     </script>
     
-    {#snippet groupSeparatorSnippet()}
+    +++{#snippet groupSeparatorSnippet()}
         <span class="custom-group-separator"></span>
-    {/snippet}
+    {/snippet}+++
     
     <OtpInput
         bind:value={otp}
         numInputs={4}
         separator=""
         inputType="number"
-        group={[2,2]} // sum of group should be equal to numInputs
-        groupSeparator={groupSeparatorSnippet} // this can be a snippet or a string
+        +++group={[2,2]} // sum of group should be equal to numInputs
+        groupSeparator={groupSeparatorSnippet}+++ // this can be a snippet or a string
     />
     
     <style>

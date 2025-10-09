@@ -2,7 +2,7 @@
 title: setValue
 ---
 
-## Set Value
+# Set Value
 
 ### Explicitly Setting Value
 Import and use `setValue` method to set the value of the input. `otp` value variable is made readonly to prevent unintended updates.

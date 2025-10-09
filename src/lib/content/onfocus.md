@@ -2,7 +2,7 @@
 title: onFocus
 ---
 
-## onFocus
+# onFocus
 This function gets called when we focus on an input field and receive event and index as a parameter. The `onFocus` prop takes an array where the `0th` index is the callback function and the `1st` index is a string specifying when to call it: `"before"`, `"after"`, or `"replace"`.
 
 Ex: `onFocus={[onFocus, "after"]}`

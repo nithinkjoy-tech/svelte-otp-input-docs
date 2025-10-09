@@ -2,7 +2,7 @@
 title: inputFocusStyle
 ---
 
-## inputFocusStyles
+# inputFocusStyles
 Style of each input box when focused
 
 | Type                              | Description      |

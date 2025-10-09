@@ -2,7 +2,7 @@
 title: restrictPaste
 ---
 
-## restrictPaste
+# restrictPaste
 Disables paste functionality when set to `true`. Accepts a boolean value. Defaults to `false`.
 
 ### Example

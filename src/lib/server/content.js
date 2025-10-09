@@ -30,7 +30,6 @@ function create_docs() {
 
 			for (const page of pages) {
 				const slug = remove_section(page.slug);
-				console.log({slug})
 				if (Object.hasOwn(docs.pages, slug)) {
 					throw new Error(`${docs.pages[slug].file} conflicts with ${page.file}`);
 				}
@@ -54,6 +53,3 @@ function create_docs() {
 }
 
 export const docs = create_docs();
-console.log({ docs });
-
-// export const examples = index.examples.children;

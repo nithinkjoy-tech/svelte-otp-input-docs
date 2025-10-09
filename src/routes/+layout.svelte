@@ -1,11 +1,13 @@
-<!-- src/routes/+layout.svelte -->
 <script>
 	import Sidebar from '$lib/components/Sidebar.svelte';
 	import hamburger from '$lib/assets/hamburger.svg?raw';
+	import github from '$lib/assets/github.svg?raw';
+	import { MediaQuery } from 'svelte/reactivity';
 	import { ThemeToggle } from '@sveltejs/site-kit/components';
 	import { theme } from '@sveltejs/site-kit/state';
-	import { MediaQuery } from 'svelte/reactivity';
+	import { page } from '$app/stores';
 
+	let mainContent;
 	let { children } = $props();
 
 	const isLargeScreen = new MediaQuery('(min-width: 1024px)');
@@ -24,6 +26,12 @@
 	function closeMobileMenu() {
 		isMobileMenuOpen = false;
 	}
+
+	$effect(() => {
+		$page.url.pathname
+		mainContent.scrollTo(0, 0);
+	})
+
 </script>
 
 <div class="app-container" class:mobile-menu-open={showOverlay}>
@@ -44,10 +52,15 @@
 					</div>
 				</button>
 			{/if}
-			<ThemeToggle />
+			<div class="header-icons-container" onclick={closeMobileMenu}>
+				<a class="github-icon" href="https://github.com/nithinkjoy-tech/svelte-otp-input" target="_blank">
+					{@html github}
+				</a>
+				<ThemeToggle />
+			</div>
 		</div>
 
-		<main class="main-content">
+		<main bind:this={mainContent} class="main-content" class:overflow-hidden={showOverlay}>
 			{@render children?.()}
 		</main>
 	</div>
@@ -60,8 +73,8 @@
 <style>
     .app-container {
         display: flex;
-        min-height: 100vh;
-        max-height: 100vh;
+        min-height: 100svh;
+        max-height: 100svh;
     }
 
     .sidebar-wrapper {
@@ -88,7 +101,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        height: 100vh;
+        height: 100svh;
         z-index: 3;
     }
 
@@ -146,6 +159,10 @@
         width: 100%;
         margin: 0 auto;
         overflow-y: auto;
+
+				@media (max-width: 600px) {
+            padding: 20px;
+        }
     }
 
     .overlay {
@@ -153,8 +170,24 @@
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100vh;
+        height: 100svh;
         background-color: rgba(0, 0, 0, 0.6);
         z-index: 2;
     }
+
+    .overflow-hidden {
+        overflow-y: hidden !important;
+    }
+
+		.header-icons-container {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+		}
+
+		.github-icon {
+				width: 34px;
+				height: 34px;
+				cursor: pointer;
+		}
 </style>

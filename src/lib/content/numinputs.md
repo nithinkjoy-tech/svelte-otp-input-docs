@@ -2,7 +2,7 @@
 title: numInputs
 ---
 
-## numInputs
+# numInputs
 This is the number of input fields required.
 
 ### Example

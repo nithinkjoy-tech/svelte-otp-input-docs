@@ -2,7 +2,7 @@
 title: separator
 ---
 
-## Separator
+# Separator
 
 Separator is the character or style between the input fields.
 
@@ -23,7 +23,7 @@ Separator is the character or style between the input fields.
     <OtpInput
         bind:value={otp}
         numInputs={4}
-        separator="•"
+        +++separator="•"+++
         inputType="number"
     />
 ```
@@ -36,14 +36,14 @@ Separator is the character or style between the input fields.
         let otp = $state("");
     </script>
     
-    {#snippet separatorSnippet()}
+    +++{#snippet separatorSnippet()}
         <span class="custom-separator"></span>
-    {/snippet}
+    {/snippet}+++
     
     <OtpInput
         bind:value={otp}
         numInputs={4}
-        separator={separatorSnippet}
+        +++separator={separatorSnippet}+++
         inputType="number"
     />
     
@@ -68,7 +68,7 @@ Separator is the character or style between the input fields.
     <OtpInput
         bind:value={otp}
         numInputs={4}
-        separator={["*","•","*"]}
+        +++separator={["*","•","*"]}+++
         inputType="number"
     />    
 ```
@@ -81,18 +81,18 @@ Separator is the character or style between the input fields.
         let otp = $state("");
     </script>
     
-    {#snippet separatorSnippet1()}
+    +++{#snippet separatorSnippet1()}
         <span class="custom-separator1"></span>
     {/snippet}
     
     {#snippet separatorSnippet2()}
         <span class="custom-separator2"></span>
-    {/snippet}
+    {/snippet}+++
     
     <OtpInput
         bind:value={otp}
         numInputs={4}
-        separator={[separatorSnippet1, separatorSnippet2, separatorSnippet1]}
+        +++separator={[separatorSnippet1, separatorSnippet2, separatorSnippet1]}+++
         inputType="number"
     />
     
@@ -121,14 +121,14 @@ Separator is the character or style between the input fields.
         let otp = $state("");
     </script>
     
-    {#snippet separatorSnippet()}
+    +++{#snippet separatorSnippet()}
         <span class="custom-separator"></span>
-    {/snippet}
+    {/snippet}+++
     
     <OtpInput
         bind:value={otp}
         numInputs={4}
-        separator={[separatorSnippet, "*", separatorSnippet]}
+        +++separator={[separatorSnippet, "*", separatorSnippet]}+++
         inputType="number"
     />
     

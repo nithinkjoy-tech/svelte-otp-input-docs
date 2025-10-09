@@ -2,8 +2,8 @@
 title: onEnter
 ---
 
-## onEnter
-This function gets called when the user clicks on the enter key and receives OTP as a parameter.
+# onEnter
+This function gets called when the user presses the enter key and receives OTP as a parameter.
 
 ### Example
 ```svelte
