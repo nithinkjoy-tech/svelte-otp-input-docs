@@ -19,6 +19,12 @@ const config = {
 			precompress: false,
 			strict: true
 		})
+	},
+	platformProxy: {
+		configPath: 'wrangler.toml',
+		environment: undefined,
+		experimentalJsonConfig: false,
+		persist: false
 	}
 };
 
