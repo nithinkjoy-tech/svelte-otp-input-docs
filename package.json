@@ -28,7 +28,12 @@
 		"packages/*"
 	],
 	"dependencies": {
+		"@shikijs/langs": "^3.13.0",
+		"@shikijs/twoslash": "^3.13.0",
 		"@sveltejs/site-kit": "workspace:*",
+		"magic-string": "^0.30.19",
+		"marked": "^16.4.0",
+		"shiki": "^3.13.0",
 		"svelte-otp-input": "^0.0.2",
 		"typescript": "^5.9.3"
 	}

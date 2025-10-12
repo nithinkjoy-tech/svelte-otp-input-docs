@@ -8,9 +8,24 @@ importers:
 
   .:
     dependencies:
+      '@shikijs/langs':
+        specifier: ^3.13.0
+        version: 3.13.0
+      '@shikijs/twoslash':
+        specifier: ^3.13.0
+        version: 3.13.0(typescript@5.9.3)
       '@sveltejs/site-kit':
         specifier: workspace:*
         version: link:packages/site-kit
+      magic-string:
+        specifier: ^0.30.19
+        version: 0.30.19
+      marked:
+        specifier: ^16.4.0
+        version: 16.4.0
+      shiki:
+        specifier: ^3.13.0
+        version: 3.13.0
       svelte-otp-input:
         specifier: ^0.0.2
         version: 0.0.2(svelte@5.39.11)
@@ -1301,6 +1316,11 @@ packages:
   marked@14.1.4:
     resolution: {integrity: sha512-vkVZ8ONmUdPnjCKc5uTRvmkRbx4EAi2OkTOXmfTDhZz3OFqMNBM1oTTWwTr4HY4uAEojhzPf+Fy8F1DWa3Sndg==}
     engines: {node: '>= 18'}
+    hasBin: true
+
+  marked@16.4.0:
+    resolution: {integrity: sha512-CTPAcRBq57cn3R8n3hwc2REddc28hjR7RzDXQ+lXLmMJYqn20BaI2cGw6QjgZGIgVfp2Wdfw4aMzgNteQ6qJgQ==}
+    engines: {node: '>= 20'}
     hasBin: true
 
   mdast-util-to-hast@13.2.0:
@@ -2684,6 +2704,8 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
 
   marked@14.1.4: {}
+
+  marked@16.4.0: {}
 
   mdast-util-to-hast@13.2.0:
     dependencies:
