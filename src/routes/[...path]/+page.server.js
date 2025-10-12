@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import { docs } from '$lib/server/content.js';
 import { render_content } from '$lib/server/renderer';
 import { error } from '@sveltejs/kit';
