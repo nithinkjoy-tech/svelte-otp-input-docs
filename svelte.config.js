@@ -13,18 +13,11 @@ const config = {
 	],
 	kit: {
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: undefined,
-			precompress: false,
-			strict: true
+			routes: {
+				include: ['/*'],
+				exclude: ['<all>']
+			}
 		})
-	},
-	platformProxy: {
-		configPath: 'wrangler.toml',
-		environment: undefined,
-		experimentalJsonConfig: false,
-		persist: false
 	}
 };
 
