@@ -119,6 +119,9 @@ importers:
       shiki:
         specifier: ^3.2.1
         version: 3.13.0
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
     devDependencies:
       '@sveltejs/kit':
         specifier: ^2.34.0
@@ -147,9 +150,6 @@ importers:
       svelte-check:
         specifier: ^4.3.1
         version: 4.3.3(picomatch@4.0.3)(svelte@5.39.11)(typescript@5.9.3)
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
       vite:
         specifier: ^7.0.4
         version: 7.1.9(@types/node@20.19.21)(jiti@2.6.1)(lightningcss@1.30.1)

@@ -42,7 +42,8 @@
 		"@shikijs/twoslash": "^3.2.1",
 		"esm-env": "^1.0.0",
 		"json5": "^2.2.3",
-		"shiki": "^3.2.1"
+		"shiki": "^3.2.1",
+		"typescript": "^5.9.3"
 	},
 	"devDependencies": {
 		"@sveltejs/kit": "^2.34.0",
@@ -54,7 +55,6 @@
 		"prettier-plugin-svelte": "^3.3.2",
 		"svelte": "^5.38.2",
 		"svelte-check": "^4.3.1",
-		"typescript": "^5.9.3",
 		"vite": "^7.0.4"
 	},
 	"publishConfig": {
