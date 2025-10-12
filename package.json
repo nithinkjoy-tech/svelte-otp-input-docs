@@ -29,7 +29,6 @@
 	],
 	"dependencies": {
 		"@sveltejs/site-kit": "workspace:*",
-		"svelte-otp-input": "^0.0.2",
-		"typescript": "^5.9.3"
+		"svelte-otp-input": "^0.0.2"
 	}
 }
