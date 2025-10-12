@@ -1,5 +1,5 @@
 <script>
-	import Sidebar from '$lib/components/Sidebar.svelte';
+	import Sidebar from '$lib/components/SideBar.svelte';
 	import hamburger from '$lib/assets/hamburger.svg?raw';
 	import github from '$lib/assets/github.svg?raw';
 	import { MediaQuery } from 'svelte/reactivity';
