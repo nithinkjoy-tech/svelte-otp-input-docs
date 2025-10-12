@@ -6,8 +6,14 @@ export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
 	server: {
 		fs: {
-			// Allow serving files from one level up to the project root
 			allow: ['./packages/site-kit'],
 		},
+	},
+	ssr: {
+		noExternal: ['@sveltejs/site-kit'],
+		external: ['shiki', 'typescript']
+	},
+	optimizeDeps: {
+		exclude: ['@sveltejs/site-kit', 'shiki']
 	}
 });

@@ -20,9 +20,7 @@ function create_docs() {
 
 	for (const [key, section] of Object.entries(index)) {
 			docs.pages[key] = section;
-			console.log({section})
 			const pages = section.children;
-			console.log({pages})
 			const transformed_section = {
 				...section,
 				children: []
