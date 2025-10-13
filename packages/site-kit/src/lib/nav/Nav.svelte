@@ -395,17 +395,17 @@ Top navigation bar for the application. It provides a slot for the left side, th
 
 			[data-icon='discord'] {
 				width: 3.4rem;
-				mask-image: url(icons/discord);
+				mask-image: url(icons/discord.svg);
 			}
 
 			[data-icon='bluesky'] {
 				width: 3rem;
-				mask-image: url(icons/bluesky);
+				mask-image: url(icons/bluesky.svg);
 			}
 
 			[data-icon='github'] {
 				width: 3rem;
-				mask-image: url(icons/github);
+				mask-image: url(icons/github.svg);
 			}
 		}
 

@@ -39,6 +39,6 @@
 		height: 1.8rem;
 		z-index: 9999;
 		background: currentColor;
-		mask: url(icons/wrench) no-repeat 50% 50% / contain;
+		mask: url(icons/wrench.svg) no-repeat 50% 50% / contain;
 	}
 </style>

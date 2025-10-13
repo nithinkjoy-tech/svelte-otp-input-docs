@@ -234,11 +234,11 @@
 					}
 
 					&::before {
-						mask-image: url(icons/copy-to-clipboard);
+						mask-image: url(icons/copy-to-clipboard.svg);
 					}
 
 					&::after {
-						mask-image: url(icons/check);
+						mask-image: url(icons/check.svg);
 						opacity: 0;
 					}
 
@@ -329,7 +329,7 @@
 			position: absolute !important;
 			display: block;
 			background: var(--sk-fg-1);
-			mask: url(icons/hash) 50% 50% no-repeat;
+			mask: url(icons/hash.svg) 50% 50% no-repeat;
 			mask-size: 2.4rem 2.4rem;
 			width: 2.6rem;
 			height: 2.2rem;
@@ -412,7 +412,7 @@
 					height: 2em;
 					top: 0.05em;
 					background: var(--sk-fg-accent);
-					mask: url(icons/lightbulb) no-repeat 0.5rem 0 / 2.6rem;
+					mask: url(icons/lightbulb.svg) no-repeat 0.5rem 0 / 2.6rem;
 					pointer-events: none;
 				}
 			}
@@ -490,7 +490,7 @@
 
 			&::after {
 				background: currentColor;
-				mask: url(icons/chevron) 50% 50% no-repeat;
+				mask: url(icons/chevron.svg) 50% 50% no-repeat;
 				mask-size: 2rem;
 				rotate: -90deg;
 				transition: rotate 0.2s;

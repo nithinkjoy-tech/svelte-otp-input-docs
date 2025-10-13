@@ -99,7 +99,7 @@
 				width: 2rem;
 				height: 2rem;
 				background: currentColor;
-				mask: url(icons/chevron);
+				mask: url(icons/chevron.svg);
 				mask-size: contain;
 				rotate: -90deg;
 				transition: rotate 0.2s;
@@ -137,12 +137,12 @@
 			left: 0;
 			height: 100%;
 			background: currentColor;
-			mask: url(icons/document) no-repeat 50% 50%;
+			mask: url(icons/document.svg) no-repeat 50% 50%;
 			mask-size: 2rem;
 		}
 
 		&.fragment::before {
-			mask-image: url(icons/hash);
+			mask-image: url(icons/hash.svg);
 		}
 
 		&:hover {

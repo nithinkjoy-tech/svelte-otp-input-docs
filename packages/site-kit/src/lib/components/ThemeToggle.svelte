@@ -39,11 +39,11 @@
 
 <style>
     .icon {
-        mask-image: url(icons/theme-dark);
+        mask-image: url(icons/theme-dark.svg);
         mask-size: 2rem;
 
         :root.dark & {
-            mask-image: url(icons/theme-light);
+            mask-image: url(icons/theme-light.svg);
         }
     }
 </style>

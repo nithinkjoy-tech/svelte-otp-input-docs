@@ -29,10 +29,10 @@
 <style>
 	.icon {
 		mask-size: 2rem;
-		mask-image: url(icons/font-elegant);
+		mask-image: url(icons/font-elegant.svg);
 	}
 
 	button[aria-pressed='false'] .icon {
-		mask-image: url(icons/font-boring);
+		mask-image: url(icons/font-boring.svg);
 	}
 </style>
