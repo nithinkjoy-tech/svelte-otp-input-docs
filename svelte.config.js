@@ -18,6 +18,9 @@ const config = {
 				exclude: ['<all>']
 			}
 		}),
+		paths: {
+			base: '/docs/svelte-otp-input'  // ← Add this
+		},
 		prerender: {
 			entries: [],
 			handleHttpError: 'ignore'
