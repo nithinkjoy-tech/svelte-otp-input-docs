@@ -57,21 +57,31 @@
 			.replace(/(^-|-$)/g, '');
 	}
 
+	// Determine base path based on current hostname
+	function getBasePath() {
+		if (typeof window !== 'undefined' && window.location.hostname.includes('nithinkjoy.dev')) {
+			return '/docs/svelte-otp-input';
+		}
+		return '';
+	}
+
+	const basePath = getBasePath();
+
 	// Handle navigation
 	function handleNavigation(item) {
 		const slug = itemToSlug(item);
-		goto(`/${slug}`);
+		goto(`${basePath}/${slug}`);
 		activeContent = item;
 		closeMobileMenu?.();
 	}
 </script>
 
 <div class="sidebar">
-	<span class="close-btn" onclick={closeMobileMenu}>
-		<span class="close">
-			{@html close}
-		</span>
-	</span>
+  <span class="close-btn" onclick={closeMobileMenu}>
+   <span class="close">
+    {@html close}
+   </span>
+  </span>
 	<div>
 		<img src={logo} class="svelte-otp-input-logo" alt="OTP Input Logo" />
 		{#each sideBarItems as { category, items }}
@@ -83,13 +93,13 @@
 							<a
 								role="menuitem"
 								tabindex="-1"
-								href="/{itemToSlug(item)}"
+								href="{basePath}/{itemToSlug(item)}"
 								class:active={itemToSlug(activeContent) === itemToSlug(item)}
 								style:color={currentTheme === 'dark' ? '#CBCCCE' : ''}
 								onclick={(e) => {
-									e.preventDefault();
-									handleNavigation(item);
-								}}>{item}</a
+          e.preventDefault();
+          handleNavigation(item);
+         }}>{item}</a
 							>
 						</li>
 					{/each}
@@ -100,79 +110,79 @@
 </div>
 
 <style>
-	.heading {
-		font-size: 60px;
-		font-weight: 600;
-		color: #f96743;
-		margin-bottom: 20px;
-		display: flex;
-		align-items: center;
-		gap: 10px;
-	}
+    .heading {
+        font-size: 60px;
+        font-weight: 600;
+        color: #f96743;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-	.svelte-otp-input-logo {
-		width: 224px;
-		height: 100px;
-		margin-bottom: 20px;
-		border-radius: 24px;
-	}
+    .svelte-otp-input-logo {
+        width: 224px;
+        height: 100px;
+        margin-bottom: 20px;
+        border-radius: 24px;
+    }
 
-	.sidebar {
-		position: relative;
-		width: 360px;
-		height: 100svh;
-		overflow-y: auto;
-		padding: 34px;
-		font-family: Arial, sans-serif;
-		background-color: var(--sk-bg-1);
-	}
-	.sidebar h2 {
-		color: #6c757d;
-		font-size: 16px;
-		margin-bottom: 10px;
-	}
-	.sidebar ul {
-		list-style: none;
-		padding: 0;
-	}
-	.sidebar ul li {
-		color: #6c757d;
-		cursor: pointer;
-	}
-	.sidebar ul li a {
-		width: 100%;
-		display: inline-block;
-		padding: 8px 0;
-		text-decoration: none;
-		color: #6c757d;
-	}
-	.sidebar ul li a.active {
-		color: #6c33ff;
-		background: linear-gradient(135deg, rgba(108, 51, 255, 0.2) 0%, rgba(108, 51, 255, 0.1) 100%);
-		padding: 8px 0;
-		padding-left: 8px;
-		border-radius: 4px;
-		display: block;
-	}
-	.category {
-		margin-top: 15px;
-	}
+    .sidebar {
+        position: relative;
+        width: 360px;
+        height: 100svh;
+        overflow-y: auto;
+        padding: 34px;
+        font-family: Arial, sans-serif;
+        background-color: var(--sk-bg-1);
+    }
+    .sidebar h2 {
+        color: #6c757d;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+    .sidebar ul li {
+        color: #6c757d;
+        cursor: pointer;
+    }
+    .sidebar ul li a {
+        width: 100%;
+        display: inline-block;
+        padding: 8px 0;
+        text-decoration: none;
+        color: #6c757d;
+    }
+    .sidebar ul li a.active {
+        color: #6c33ff;
+        background: linear-gradient(135deg, rgba(108, 51, 255, 0.2) 0%, rgba(108, 51, 255, 0.1) 100%);
+        padding: 8px 0;
+        padding-left: 8px;
+        border-radius: 4px;
+        display: block;
+    }
+    .category {
+        margin-top: 15px;
+    }
 
-	.close {
-		position: absolute;
-		top: 10px;
-		right: 10px;
-		width: 24px;
-		height: 24px;
-		cursor: pointer;
-	}
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
 
-	.close-btn {
-		display: none;
-	}
+    .close-btn {
+        display: none;
+    }
 
-	.close-btn :global(path) {
-		stroke: var(--sk-fg-2);
-		fill: var(--sk-fg-2);
-	}
+    .close-btn :global(path) {
+        stroke: var(--sk-fg-2);
+        fill: var(--sk-fg-2);
+    }
 </style>
