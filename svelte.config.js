@@ -19,19 +19,9 @@ const config = {
 			}
 		}),
 		prerender: {
-			handleHttpError: ({ path, referrer, message }) => {
-				// Ignore 404s for favicon
-				if (path === '/apple-touch-icon.png') {
-					return;
-				}
-
-				if (path === '/favicon.ico') {
-					return;
-				}
-				// Throw error for other cases
-				throw new Error(message);
-			}
-		}
+			entries: [],
+			handleHttpError: 'ignore'
+		},
 	}
 };
 

@@ -83,7 +83,7 @@
 							<a
 								role="menuitem"
 								tabindex="-1"
-								href="/{itemToSlug(item)}"
+								href="/docs/svelte-otp-input/{itemToSlug(item)}"
 								class:active={itemToSlug(activeContent) === itemToSlug(item)}
 								style:color={currentTheme === 'dark' ? '#CBCCCE' : ''}
 								onclick={(e) => {

@@ -1,10 +1,10 @@
 import { docs } from '$lib/server/content.js';
-import { render_content } from '$lib/server/renderer';
+import { render_content } from '$lib/server/renderer.js';
 import { error } from '@sveltejs/kit';
 
 export const prerender = true;
 
-/** @type {import('./$types').EntryGenerator} */
+/** @type {import('../../../../.svelte-kit/types/src/routes').EntryGenerator} */
 export function entries() {
 	return Object.keys(docs.pages).map(path => ({ path }));
 }
