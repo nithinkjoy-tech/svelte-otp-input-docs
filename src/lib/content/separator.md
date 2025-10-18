@@ -2,7 +2,7 @@
 title: separator
 ---
 
-# Separator
+# separator
 
 Separator is the character or style between the input fields.
 

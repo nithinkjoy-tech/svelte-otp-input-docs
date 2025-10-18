@@ -1,8 +1,8 @@
 ---
-title: group Separator
+title: groupSeparator
 ---
 
-# group Separator
+# groupSeparator
 
 group Separator is used to separate the groups of the input field, It is used along with [`group`](group) prop.
 

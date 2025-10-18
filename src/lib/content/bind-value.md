@@ -2,7 +2,7 @@
 title: bind:value
 ---
 
-# Bind Value
+# bind:value
 
 The `bind:value` directive in Svelte enables data binding between the OtpInput component and a variable, ensuring seamless synchronization of the input's value with the specified variable.
 

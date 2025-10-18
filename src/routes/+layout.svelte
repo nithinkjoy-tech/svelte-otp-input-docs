@@ -2,6 +2,7 @@
 	import Sidebar from '$lib/Components/Sidebar.svelte';
 	import hamburger from '$lib/assets/hamburger.svg?raw';
 	import github from '$lib/assets/github.svg?raw';
+	import npm from '$lib/assets/npm.svg?raw';
 	import { MediaQuery } from 'svelte/reactivity';
 	import { ThemeToggle } from '@sveltejs/site-kit/components';
 	import { theme } from '@sveltejs/site-kit/state';
@@ -41,18 +42,29 @@
 
 	<div class="content">
 		<div class="header">
-			{#if !isLargeScreen.current}
-				<button
-					class="hamburger-btn"
-					onclick={toggleMobileMenu}
-					aria-label="Toggle menu"
-				>
-					<div class="hamburger">
-						{@html hamburger}
-					</div>
-				</button>
-			{/if}
+				<div class="hamburger-port-container">
+					{#if !isLargeScreen.current}
+						<button
+							class="hamburger-btn"
+							onclick={toggleMobileMenu}
+							aria-label="Toggle menu"
+						>
+							<div class="hamburger">
+								{@html hamburger}
+							</div>
+						</button>
+					{/if}
+					<a href="/" class="portfolio-link">
+						<div class="dev-portfolio-btn">
+							<div class="dev-portfolio-text">Dev portfolio</div>
+						</div>
+					</a>
+				</div>
+
 			<div class="header-icons-container" onclick={closeMobileMenu}>
+				<a class="npm-icon" href="https://www.npmjs.com/package/svelte-otp-input" target="_blank">
+					{@html npm}
+				</a>
 				<a class="github-icon" href="https://github.com/nithinkjoy-tech/svelte-otp-input" target="_blank">
 					{@html github}
 				</a>
@@ -119,13 +131,19 @@
     .header {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
         gap: 20px;
         padding: 10px;
         max-width: 1024px;
         width: 100%;
         margin: 0 auto;
     }
+
+		.hamburger-port-container {
+				display: flex;
+				flex-direction: row;
+				gap: 24px;
+		}
 
     .hamburger-btn {
         padding: 0;
@@ -151,6 +169,48 @@
 		.hamburger :global(path) {
         stroke: var(--sk-fg-2);
     }
+
+		.portfolio-link {
+				text-decoration: none;
+		}
+
+    .dev-portfolio-btn {
+        display: flex;
+        align-items: center;
+        gap: 12px; /* equivalent to gap-3 */
+        padding: 12px; /* p-3 */
+        border: 2px solid var(--sk-fg-portfolio);
+        border-radius: 34px;
+        cursor: pointer;
+        color: white;
+        padding-left: 12px; /* px-4 */
+        padding-right: 12px;
+        padding-top: 4px; /* py-2 */
+        padding-bottom: 4px;
+        transition: all 0.3s ease;
+				cursor: pointer;
+    }
+
+    /* Responsive (sm:p-2) */
+    @media (max-width: 640px) {
+        .dev-portfolio-btn {
+            padding: 8px;
+        }
+    }
+
+    /*.dev-portfolio-btn:hover {*/
+    /*    color: var(--sk-fg-portfolio);*/
+    /*    border-color: var(--sk-fg-portfolio);*/
+    /*}*/
+
+    .dev-portfolio-text {
+        display: flex;
+        white-space: nowrap;
+        color: var(--sk-fg-portfolio);
+				font-size: 16px;
+        line-height: normal;
+    }
+
 
     .main-content {
         flex: 1;
@@ -190,4 +250,10 @@
 				height: 34px;
 				cursor: pointer;
 		}
+
+    .npm-icon {
+				width: 34px;
+				height: 6px;
+				cursor: pointer;
+    }
 </style>

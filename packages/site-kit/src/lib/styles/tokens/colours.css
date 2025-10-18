@@ -9,6 +9,8 @@
 	color-scheme: light;
 
 	/* Foreground colours */
+    --sk-fg-npm: #262626;
+    --sk-fg-portfolio: #D64524;
 	--sk-fg-1: hsl(0, 0%, 8%); /* for headings, and (very sparingly) as a highlight colour */
 	--sk-fg-2: hsl(0, 0%, 15%); /* most text should be this colour */
 	--sk-fg-3: hsl(0, 0%, 40%); /* secondary text (e.g. figcaptions) and icons */
@@ -51,7 +53,9 @@
 	--sk-bg-hue: 220;
 
 	/* Foreground colours */
+    --sk-fg-portfolio: #01FFFF;
 	--sk-fg-1: hsl(var(--sk-bg-hue), 2%, 90%);
+    --sk-fg-npm: #cc0100;
 	--sk-fg-2: hsl(var(--sk-bg-hue), 3%, 80%);
 	--sk-fg-3: hsl(var(--sk-bg-hue), 5%, 65%);
 	--sk-fg-4: hsl(var(--sk-bg-hue), 5%, 55%);
