@@ -54,9 +54,9 @@
 							</div>
 						</button>
 					{/if}
-					<a href="/" class="portfolio-link">
+					<a href="https://nithinkjoy.dev" class="portfolio-link">
 						<div class="dev-portfolio-btn">
-							<div class="dev-portfolio-text">Dev portfolio</div>
+							<div class="dev-portfolio-text">Visit Dev Portfolio</div>
 						</div>
 					</a>
 				</div>
@@ -105,6 +105,10 @@
         .sidebar-wrapper {
             display: none;
         }
+
+				.header {
+            box-shadow: 0 -2px 32px 0 rgba(0, 0, 0, 0.08);
+				}
     }
 
     /* Mobile sidebar positioning when menu is open */
@@ -198,7 +202,7 @@
     /* Responsive (sm:p-2) */
     @media (max-width: 640px) {
         .dev-portfolio-btn {
-            padding: 8px;
+            padding: 5px 8px;
         }
     }
 
@@ -213,6 +217,7 @@
         color: var(--sk-fg-portfolio);
 				font-size: 16px;
         line-height: normal;
+				font-weight: 500;
     }
 
 
