@@ -158,6 +158,10 @@
         .hamburger-btn {
             display: none;
         }
+
+        .portfolio-link {
+            margin-left: 48px;
+        }
     }
 
     .hamburger {
