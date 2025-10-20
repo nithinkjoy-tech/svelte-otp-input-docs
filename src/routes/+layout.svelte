@@ -34,12 +34,6 @@
 		mainContent.scrollTo(0, 0);
 	})
 
-	$effect(() => {
-		if ($page.url.pathname === '/' || $page.url.pathname === '') {
-			goto('/basic-usage', { replaceState: true });
-		}
-	})
-
 </script>
 
 <div class="app-container" class:mobile-menu-open={showOverlay}>
