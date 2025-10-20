@@ -7,6 +7,7 @@
 	import { ThemeToggle } from '@sveltejs/site-kit/components';
 	import { theme } from '@sveltejs/site-kit/state';
 	import { page } from '$app/stores';
+	import { goto } from '$app/navigation';
 
 	let mainContent;
 	let { children } = $props();
@@ -31,6 +32,12 @@
 	$effect(() => {
 		$page.url.pathname
 		mainContent.scrollTo(0, 0);
+	})
+
+	$effect(() => {
+		if ($page.url.pathname === '/' || $page.url.pathname === '') {
+			goto('/basic-usage', { replaceState: true });
+		}
 	})
 
 </script>
